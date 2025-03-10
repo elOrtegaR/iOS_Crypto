@@ -11,7 +11,7 @@ import SwiftUI
 class NavigationManager: ObservableObject {
     @Published var path: NavigationPath = .init()
     
-    func push(_ screen: NavigationDestination) { // indicates screen (T for template) can be any kind while conforms hashable
+    func push(_ screen: NavigationDestination) {
         path.append(screen)
     }
     

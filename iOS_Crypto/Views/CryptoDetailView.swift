@@ -9,21 +9,11 @@ import SwiftUI
 
 struct CryptoDetailView: View {
     @EnvironmentObject private var navigationManager: NavigationManager
-
+    let crypto: Crypto
+    
     var body: some View {
         VStack {
-            Text("Hello, World!")
-                .padding()
-            
-            Button(action: {
-                navigationManager.pop()
-            }, label: {
-                Text("Go back")
-            })
+            Text(crypto.name)
         }
     }
-}
-
-#Preview {
-    CryptoDetailView()
 }

@@ -26,8 +26,8 @@ struct NavigationManagerView: View {
         switch screen {
         case .home:
             HomeView()
-        case .cryptoDetail:
-            CryptoDetailView()
+        case .cryptoDetail(let crypto):
+            CryptoDetailView(crypto: crypto)
         }
     }
 }
