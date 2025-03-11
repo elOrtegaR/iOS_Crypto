@@ -52,6 +52,14 @@ struct HomeView: View {
                 })
             })
         }
+        .cryptoAlert(
+            isPresented: $viewModel.showAlert,
+            type: .informative,
+            title: "Error",
+            message: "Check your internet connection and try again",
+            titlebutton: "Accept",
+            actionButton: {}
+        )
         .padding()
     }
 }

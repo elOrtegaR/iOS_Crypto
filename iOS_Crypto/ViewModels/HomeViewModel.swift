@@ -10,6 +10,7 @@ import Combine
 
 class HomeViewModel: ObservableObject {
     @Published var cryptos: [Crypto] = .init()
+    @Published var showAlert = false
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -24,12 +25,13 @@ class HomeViewModel: ObservableObject {
             .map { $0.data }
             .decode(type: [Crypto].self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
+            .sink(receiveCompletion: { [weak self] completion in
                 switch completion {
                 case .finished:
                     print("Finished")
                 case .failure(let failure):
                     print("Error: \(failure.localizedDescription)")
+                    self?.showAlert = true
                 }
             }, receiveValue: { [weak self] value in
                 self?.cryptos = Array(value.prefix(20))

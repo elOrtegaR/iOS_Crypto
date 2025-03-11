@@ -22,7 +22,7 @@ struct CryptoButton: View {
                 if let titleButton = title {
                     Text(titleButton)
                         .font(.system(size: fontSize, weight: .semibold))
-                        .foregroundColor(.primary)
+                        .foregroundColor(fontColor)
                         .frame(height: heightButton)
                         .padding(.vertical)
                 }
@@ -32,9 +32,10 @@ struct CryptoButton: View {
                         .resizable()
                         .frame(width: iconSize, height: iconSize)
                 }
+                
             }
-            .cornerRadius(12)
             .background(backgroundColor)
+            .cornerRadius(20)
             .frame(maxWidth: .infinity)
         })
     }
@@ -49,6 +50,19 @@ struct CryptoButton: View {
             return Color.clear
         case .refresh:
             return Color.clear
+        }
+    }
+    
+    private var fontColor: Color {
+        switch type {
+        case .primary:
+            return .primary
+        case .secondary:
+            return .black
+        case .configuration:
+            return Color.clear
+        case .refresh:
+            return .primary
         }
     }
     
