@@ -24,15 +24,13 @@ extension Double {
 extension String {
     func toDate () -> String? {
         let formatter = DateFormatter()
-        
         formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
-        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.locale = Locale.current
+        formatter.timeZone = TimeZone.current
         
         if let date = formatter.date(from: self) {
             formatter.dateStyle = .short
             formatter.timeStyle = .short
-            formatter.locale = Locale(identifier: "en_US")
-            
             return formatter.string(from: date)
         }
         

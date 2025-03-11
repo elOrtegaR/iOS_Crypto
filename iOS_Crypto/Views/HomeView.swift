@@ -13,14 +13,17 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            
             Text("Cryptocurrency Prices and Market Cap")
                 .foregroundStyle(.primary)
-                .padding()
+                .padding(.vertical)
             
             Divider()
             
             ScrollView {
+                CryptoButton(title: "Refresh", type: .refresh, action: {
+                    viewModel.loadCryptoData()
+                })
+                
                 ForEach(viewModel.cryptos, id: \.self) { crypto in
                     Button(action: {
                         navigationManager.push(.cryptoDetail(cripto: crypto))
@@ -39,9 +42,12 @@ struct HomeView: View {
                 }
             }
         }
+        .refreshable {
+            viewModel.loadCryptoData()
+        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing, content: {
-                CryptoButtons(title: nil, type: .configuration, action: {
+                CryptoButton(title: nil, type: .configuration, action: {
                     navigationManager.push(.settings)
                 })
             })

@@ -1,5 +1,5 @@
 //
-//  CryptoButtons.swift
+//  CryptoButton.swift
 //  iOS_Crypto
 //
 //  Created by Ortega on 10/03/25.
@@ -11,7 +11,7 @@ enum ButtonType {
     case primary, secondary, configuration, refresh
 }
 
-struct CryptoButtons: View {
+struct CryptoButton: View {
     var title: String?
     var type: ButtonType
     var action: () -> Void
@@ -23,22 +23,20 @@ struct CryptoButtons: View {
                     Text(titleButton)
                         .font(.system(size: fontSize, weight: .semibold))
                         .foregroundColor(.primary)
-                        .frame(maxWidth: .infinity)
                         .frame(height: heightButton)
+                        .padding(.vertical)
                 }
                 
                 if let icon = iconButton {
                     Image(systemName: icon)
                         .resizable()
-                        .frame(width: 24, height: 24)
+                        .frame(width: iconSize, height: iconSize)
                 }
             }
             .cornerRadius(12)
             .background(backgroundColor)
             .frame(maxWidth: .infinity)
         })
-        
-        .padding()
     }
     
     private var backgroundColor: Color {
@@ -77,7 +75,7 @@ struct CryptoButtons: View {
         case .configuration:
             return 32
         case .refresh:
-            return 28
+            return 14
         }
     }
     
@@ -90,7 +88,7 @@ struct CryptoButtons: View {
         case .configuration:
             return 18
         case .refresh:
-            return 16
+            return 14
         }
     }
     
@@ -106,17 +104,30 @@ struct CryptoButtons: View {
             return "arrow.clockwise"
         }
     }
+    
+    private var iconSize: CGFloat {
+        switch type {
+        case .primary:
+            return 0
+        case .secondary:
+            return 0
+        case .configuration:
+            return 24
+        case .refresh:
+            return 14
+        }
+    }
 }
 
 #Preview {
     VStack {
-        CryptoButtons(title: "Test primary Button", type: .primary, action: {})
+        CryptoButton(title: "Test primary Button", type: .primary, action: {})
             .padding(.vertical)
-        CryptoButtons(title: "Test secondary Button", type: .secondary, action: {})
+        CryptoButton(title: "Test secondary Button", type: .secondary, action: {})
             .padding(.vertical)
-        CryptoButtons(title: nil, type: .configuration, action: {})
+        CryptoButton(title: nil, type: .configuration, action: {})
             .padding(.vertical)
-        CryptoButtons(title: nil, type: .refresh, action: {})
+        CryptoButton(title: "Update", type: .refresh, action: {})
             .padding(.vertical)
     }
 }
