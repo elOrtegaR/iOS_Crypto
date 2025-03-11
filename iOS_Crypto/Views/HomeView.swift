@@ -33,11 +33,18 @@ struct HomeView: View {
                             imageURL: crypto.image
                         )
                     })
-                    .foregroundColor(.black)
+                    .foregroundColor(.primary)
                     
                     Divider()
                 }
             }
+        }
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing, content: {
+                CryptoButtons(title: nil, type: .configuration, action: {
+                    navigationManager.push(.settings)
+                })
+            })
         }
         .padding()
     }

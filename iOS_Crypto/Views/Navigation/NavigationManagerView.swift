@@ -28,6 +28,8 @@ struct NavigationManagerView: View {
             HomeView()
         case .cryptoDetail(let crypto):
             CryptoDetailView(crypto: crypto)
+        case .settings:
+            SettingsView()
         }
     }
 }

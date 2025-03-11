@@ -105,5 +105,6 @@ struct CryptoDetailView: View {
                 Spacer()
             }
         }
+        .navigationTitle("Crypto details")
     }
 }

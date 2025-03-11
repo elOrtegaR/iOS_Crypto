@@ -10,4 +10,5 @@ import Foundation
 enum NavigationDestination: Hashable {
     case home
     case cryptoDetail(cripto: Crypto)
+    case settings
 }
