@@ -1,0 +1,32 @@
+/* HomeView Title */
+"Cryptocurrency Prices and Market Cap" = "Cryptocurrency Prices and Market Cap";
+
+/* Settings subtitle */
+"Customize your preferences" = "Customize your preferences";
+
+/* Dark mode */
+"Dark mode" = "Dark mode";
+
+/* Settings Title */
+"Settings" = "Settings";
+
+/* last update date */
+"Last update: %@" = "Last update: %@";
+
+/* Price change on last 24 hours */
+"Price change (24h)" = "Price change (24h)";
+
+/* highest price on last 24 hours */
+"Highest price (24h)" = "Highest price (24h)";
+
+/* lowest price on last 24 hours */
+"Lowest Price (24h)" = "Lowest Price (24h)";
+
+/* total volume info on last 24 hours */
+"Total volume (24h)" = "Total volume (24h)";
+
+/* Market CAP info */
+"Market CAP (24h)" = "Market CAP (24h)";
+
+/* Crypto details title */
+"Crypto details" = "Crypto details";

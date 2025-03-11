@@ -1,0 +1,32 @@
+/* HomeView Title */
+"Cryptocurrency Prices and Market Cap" = "Precios y capitalización bursátil de las criptomonedas";
+
+/* Settings subtitle */
+"Customize your preferences" = "Personaliza tus preferencias";
+
+/* Dark mode */
+"Dark mode" = "Modo noche";
+
+/* Settings Title */
+"Settings" = "Configuración";
+
+/* last update date */
+"Last update: %@" = "Última actualización: %@";
+
+/* Price change on last 24 hours */
+"Price change (24h)" = "Cambio de precio (24h)";
+
+/* highest price on last 24 hours */
+"Highest price (24h)" = "Precio más alto (24h)";
+
+/* lowest price on last 24 hours */
+"Lowest Price (24h)" = "Precio más bajo (24h)";
+
+/* total volume info on last 24 hours */
+"Total volume (24h)" = "Volumen total (24h)";
+
+/* Market CAP info */
+"Market CAP (24h)" = "CAP del mercado (24h)";
+
+/* Crypto details title */
+"Crypto details" = "Detalles de Crypto";
