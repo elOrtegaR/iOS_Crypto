@@ -14,6 +14,7 @@
 		02B100182D80A5D2003FAA6D /* CryptoDetailViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B100172D80A5D2003FAA6D /* CryptoDetailViewModelTests.swift */; };
 		02B1001A2D80A7FC003FAA6D /* SettingsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B100192D80A7FC003FAA6D /* SettingsViewModelTests.swift */; };
 		02B1001C2D80AAF3003FAA6D /* NavigationManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1001B2D80AAF3003FAA6D /* NavigationManagerTests.swift */; };
+		02B1001E2D80B0D2003FAA6D /* .github in Resources */ = {isa = PBXBuildFile; fileRef = 02B1001D2D80B0D2003FAA6D /* .github */; };
 		02B1FFD52D7CE9B2003FAA6D /* iOS_CryptoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1FFD42D7CE9B2003FAA6D /* iOS_CryptoApp.swift */; };
 		02B1FFD72D7CE9B2003FAA6D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1FFD62D7CE9B2003FAA6D /* HomeView.swift */; };
 		02B1FFD92D7CE9B5003FAA6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02B1FFD82D7CE9B5003FAA6D /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		02B100172D80A5D2003FAA6D /* CryptoDetailViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailViewModelTests.swift; sourceTree = "<group>"; };
 		02B100192D80A7FC003FAA6D /* SettingsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelTests.swift; sourceTree = "<group>"; };
 		02B1001B2D80AAF3003FAA6D /* NavigationManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManagerTests.swift; sourceTree = "<group>"; };
+		02B1001D2D80B0D2003FAA6D /* .github */ = {isa = PBXFileReference; lastKnownFileType = folder; path = .github; sourceTree = "<group>"; };
 		02B1FFD12D7CE9B2003FAA6D /* iOS_Crypto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOS_Crypto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B1FFD42D7CE9B2003FAA6D /* iOS_CryptoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_CryptoApp.swift; sourceTree = "<group>"; };
 		02B1FFD62D7CE9B2003FAA6D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 		02B1FFC82D7CE9B2003FAA6D = {
 			isa = PBXGroup;
 			children = (
+				02B1001D2D80B0D2003FAA6D /* .github */,
 				02B1FFD32D7CE9B2003FAA6D /* iOS_Crypto */,
 				02B1000F2D80A1EE003FAA6D /* iOS_CryptoTests */,
 				02B1FFD22D7CE9B2003FAA6D /* Products */,
@@ -302,6 +305,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B1001E2D80B0D2003FAA6D /* .github in Resources */,
 				02B1FFDC2D7CE9B5003FAA6D /* Preview Assets.xcassets in Resources */,
 				02B1FFD92D7CE9B5003FAA6D /* Assets.xcassets in Resources */,
 			);

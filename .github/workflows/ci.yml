@@ -1,0 +1,34 @@
+name: iOS_Crypto CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Xcode
+        run: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+
+      - name: Cache Derived Data
+        uses: actions/cache@v3
+        with:
+          path: ~/Library/Developer/Xcode/DerivedData
+          key: ${{ runner.os }}-xcode-deriveddata-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-xcode-deriveddata-
+
+      - name: Build project
+        run: xcodebuild clean build -scheme "iOS_Crypto" -destination "platform=iOS Simulator,name=iPhone 15" | xcpretty
+
+      - name: Run tests
+        run: xcodebuild test -scheme "iOS_Crypto" -destination "platform=iOS Simulator,name=iPhone 15" | xcpretty && exit ${PIPESTATUS[0]}
