@@ -31,7 +31,3 @@ struct NavigationManagerView: View {
         }
     }
 }
-
-#Preview {
-    NavigationManagerView()
-}

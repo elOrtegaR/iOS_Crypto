@@ -42,9 +42,3 @@ struct HomeView: View {
         .padding()
     }
 }
-
-
-
-#Preview {
-    HomeView()
-}

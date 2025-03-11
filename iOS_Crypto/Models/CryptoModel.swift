@@ -21,7 +21,7 @@ struct Crypto: Codable, Hashable {
     let name: String
     
     /// The Cripto's URL icon
-    let image: String
+    let image: String?
     
     /// Current prince of Crypto
     let current_price: Double

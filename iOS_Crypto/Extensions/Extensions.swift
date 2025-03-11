@@ -9,11 +9,11 @@ import Foundation
 import SwiftUI
 
 extension Double {
-    func currentPriceToString() -> String {
+    func currentAmountToString(maxDigits: Int = 2) -> String {
         let formatter = NumberFormatter()
         formatter.locale = Locale(identifier: "en_US")
         formatter.numberStyle = .currency
-        formatter.maximumFractionDigits = 2
+        formatter.maximumFractionDigits = maxDigits
         formatter.minimumFractionDigits = 2
         formatter.currencySymbol = "$"
         

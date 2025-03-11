@@ -36,7 +36,7 @@ struct CryptoSimpleView: View {
                 
                 Spacer()
                 
-                Text(currentPrince.currentPriceToString())
+                Text(currentPrince.currentAmountToString())
                     .foregroundStyle(.primary)
                     .padding()
                 

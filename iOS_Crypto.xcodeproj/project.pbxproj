@@ -19,6 +19,7 @@
 		02B1FFF32D7F7970003FAA6D /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1FFF22D7F7970003FAA6D /* CryptoModel.swift */; };
 		02B1FFF62D7F8F21003FAA6D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1FFF52D7F8F21003FAA6D /* Extensions.swift */; };
 		02B1FFF82D7FA5F4003FAA6D /* CryptoSimpleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1FFF72D7FA5F4003FAA6D /* CryptoSimpleView.swift */; };
+		02B1FFFA2D7FB0EC003FAA6D /* CryptoDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B1FFF92D7FB0EC003FAA6D /* CryptoDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		02B1FFF22D7F7970003FAA6D /* CryptoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoModel.swift; sourceTree = "<group>"; };
 		02B1FFF52D7F8F21003FAA6D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		02B1FFF72D7FA5F4003FAA6D /* CryptoSimpleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoSimpleView.swift; sourceTree = "<group>"; };
+		02B1FFF92D7FB0EC003FAA6D /* CryptoDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			children = (
 				02B1FFE52D7CEB01003FAA6D /* Navigation */,
 				02B1FFF02D7F791F003FAA6D /* HomeViewModel.swift */,
+				02B1FFF92D7FB0EC003FAA6D /* CryptoDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				02B1FFD72D7CE9B2003FAA6D /* HomeView.swift in Sources */,
 				02B1FFD52D7CE9B2003FAA6D /* iOS_CryptoApp.swift in Sources */,
 				02B1FFF32D7F7970003FAA6D /* CryptoModel.swift in Sources */,
+				02B1FFFA2D7FB0EC003FAA6D /* CryptoDetailViewModel.swift in Sources */,
 				02B1FFF62D7F8F21003FAA6D /* Extensions.swift in Sources */,
 				02B1FFE72D7CEB3B003FAA6D /* NavigationManager.swift in Sources */,
 			);
