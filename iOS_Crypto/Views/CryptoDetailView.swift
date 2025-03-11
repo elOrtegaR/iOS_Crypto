@@ -27,19 +27,25 @@ struct CryptoDetailView: View {
                 
                 Text(crypto.name)
                     .foregroundStyle(.primary)
+                    .font(.title2)
                 
                 HStack {
                     Text(crypto.symbol.uppercased())
                         .foregroundStyle(.secondary)
                         .padding(.top, 8)
+                        .font(.headline)
                 }
                 
                 Divider()
                 
                 Text("Price change (24h)")
+                    .foregroundStyle(.primary)
+                    .font(.title3)
                     .padding()
                 
                 Text(crypto.price_change_24h.currentAmountToString(maxDigits: 6))
+                    .foregroundStyle(.primary)
+                    .font(.headline)
                     .padding()
                 
                 HStack {
@@ -47,7 +53,8 @@ struct CryptoDetailView: View {
                         .resizable()
                         .frame(width: 20, height: 20)
                     Text("\(crypto.price_change_percentage_24h)%")
-                        .foregroundStyle(.tertiary)
+                        .font(.headline)
+                        .foregroundStyle(.secondary)
                 }
                 
                 Divider()
@@ -57,9 +64,13 @@ struct CryptoDetailView: View {
                 HStack {
                     VStack {
                         Text("Highest price (24h)")
+                            .foregroundStyle(.primary)
+                            .font(.title3)
                             .padding()
                         
                         Text(crypto.high_24h.currentAmountToString(maxDigits: 6))
+                            .foregroundStyle(.primary)
+                            .font(.headline)
                             .padding()
                         
                         Divider()
@@ -69,9 +80,13 @@ struct CryptoDetailView: View {
                     
                     VStack {
                         Text("Lowest Price (24h)")
+                            .foregroundStyle(.primary)
+                            .font(.title3)
                             .padding()
                         
                         Text(crypto.low_24h.currentAmountToString(maxDigits: 6))
+                            .foregroundStyle(.primary)
+                            .font(.headline)
                             .padding()
                         
                         Divider()
@@ -81,9 +96,13 @@ struct CryptoDetailView: View {
                 HStack {
                     VStack {
                         Text("Total volume (24h)")
+                            .foregroundStyle(.primary)
+                            .font(.title3)
                             .padding()
                         
                         Text(crypto.total_volume.currentAmountToString(maxDigits: 6))
+                            .foregroundStyle(.primary)
+                            .font(.headline)
                             .padding()
                         
                         Divider()
@@ -93,9 +112,13 @@ struct CryptoDetailView: View {
                     
                     VStack {
                         Text("Market CAP (24h)")
+                            .foregroundStyle(.primary)
+                            .font(.title3)
                             .padding()
                         
                         Text(crypto.market_cap.currentAmountToString(maxDigits: 6))
+                            .foregroundStyle(.primary)
+                            .font(.headline)
                             .padding()
                         
                         Divider()
