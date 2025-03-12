@@ -11,11 +11,20 @@ import Combine
 class HomeViewModel: ObservableObject {
     @Published var cryptos: [Crypto] = .init()
     @Published var showAlert = false
-    
+    @Published var searchBar = ""
+
     private var cancellables = Set<AnyCancellable>()
     
     init() {
         loadCryptoData()
+    }
+    
+    var filterForCryptos: [Crypto] {
+        if searchBar.isEmpty {
+            return cryptos
+        } else {
+            return cryptos.filter { $0.name.localizedCaseInsensitiveContains(searchBar) }
+        }
     }
     
     func loadCryptoData() {

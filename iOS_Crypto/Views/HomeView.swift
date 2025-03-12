@@ -17,14 +17,20 @@ struct HomeView: View {
                 .foregroundStyle(.primary)
                 .padding(.vertical)
             
+            TextField("Search...", text: $viewModel.searchBar)
+                .padding(10)
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+                .padding(.horizontal)
+            
             Divider()
             
+            CryptoButton(title: "Refresh", type: .refresh, action: {
+                viewModel.loadCryptoData()
+            })
+            
             ScrollView {
-                CryptoButton(title: "Refresh", type: .refresh, action: {
-                    viewModel.loadCryptoData()
-                })
-                
-                ForEach(viewModel.cryptos, id: \.self) { crypto in
+                ForEach(viewModel.filterForCryptos, id: \.self) { crypto in
                     Button(action: {
                         navigationManager.push(.cryptoDetail(cripto: crypto))
                     }, label: {
@@ -37,7 +43,6 @@ struct HomeView: View {
                         )
                     })
                     .foregroundColor(.primary)
-                    
                     Divider()
                 }
             }
